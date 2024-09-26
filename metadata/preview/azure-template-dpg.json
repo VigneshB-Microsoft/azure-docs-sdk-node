@@ -1,7 +1,7 @@
 {
   "Name": "@azure/template-dpg",
-  "Version": "1.0.0-alpha.20240926.3",
-  "DevVersion": "1.0.0-alpha.20240926.3",
+  "Version": "1.0.0-alpha.20240926.7",
+  "DevVersion": "1.0.0-alpha.20240926.7",
   "DirectoryPath": "sdk/template/template-dpg",
   "ServiceDirectory": "template",
   "ReadMePath": "sdk/template/template-dpg/README.md",
