@@ -1,7 +1,7 @@
 {
   "Name": "@azure/template",
-  "Version": "1.0.12-beta.4086740",
-  "DevVersion": null,
+  "Version": "1.0.12-alpha.20240926.3",
+  "DevVersion": "1.0.12-alpha.20240926.3",
   "DirectoryPath": "sdk/template/template",
   "ServiceDirectory": "template",
   "ReadMePath": "sdk/template/template/README.md",
@@ -10,6 +10,8 @@
   "SdkType": "client",
   "IsNewSdk": true,
   "ArtifactName": "azure-template",
-  "ReleaseStatus": "2024-08-27",
+  "ReleaseStatus": "2024-09-26",
+  "IncludedForValidation": false,
+  "AdditionalValidationPackages": null,
   "DependentPackages": null
 }
