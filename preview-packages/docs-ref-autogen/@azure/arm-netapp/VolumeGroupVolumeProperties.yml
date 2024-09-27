@@ -42,7 +42,7 @@ properties:
   - name: backupId
     uid: '@azure/arm-netapp.VolumeGroupVolumeProperties.backupId'
     package: '@azure/arm-netapp'
-    summary: UUID v4 or resource identifier used to identify the Backup.
+    summary: Resource identifier used to identify the Backup.
     fullName: backupId
     remarks: ''
     isDeprecated: false
@@ -332,22 +332,6 @@ properties:
       return:
         description: ''
         type: string
-  - name: inheritedSizeInBytes
-    uid: '@azure/arm-netapp.VolumeGroupVolumeProperties.inheritedSizeInBytes'
-    package: '@azure/arm-netapp'
-    summary: >-
-      Space shared by short term clone volume with parent volume in bytes.
-
-      NOTE: This property will not be serialized. It can only be populated by
-      the server.
-    fullName: inheritedSizeInBytes
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: 'inheritedSizeInBytes?: number'
-      return:
-        description: ''
-        type: number
   - name: isDefaultQuotaEnabled
     uid: '@azure/arm-netapp.VolumeGroupVolumeProperties.isDefaultQuotaEnabled'
     package: '@azure/arm-netapp'
@@ -686,7 +670,7 @@ properties:
   - name: snapshotId
     uid: '@azure/arm-netapp.VolumeGroupVolumeProperties.snapshotId'
     package: '@azure/arm-netapp'
-    summary: UUID v4 or resource identifier used to identify the Snapshot.
+    summary: Resource identifier used to identify the Snapshot.
     fullName: snapshotId
     remarks: ''
     isDeprecated: false
@@ -807,9 +791,10 @@ properties:
     package: '@azure/arm-netapp'
     summary: >-
       Maximum storage quota allowed for a file system in bytes. This is a soft
-      quota used for alerting only. Minimum size is 100 GiB. Upper limit is
-      100TiB, 500Tib for LargeVolume or 2400Tib for LargeVolume on exceptional
-      basis. Specified in bytes.
+      quota used for alerting only. For regular volumes, valid values are in the
+      range 50GiB to 100TiB. For large volumes, valid values are in the range
+      100TiB to 500TiB, and on an exceptional basis, from to 2400GiB to 2400TiB.
+      Values expressed in bytes as multiples of 1 GiB.
     fullName: usageThreshold
     remarks: ''
     isDeprecated: false
@@ -853,8 +838,7 @@ properties:
     package: '@azure/arm-netapp'
     summary: >-
       What type of volume is this. For destination volumes in Cross Region
-      Replication, set type to DataProtection. For creating clone volume, set
-      type to ShortTermClone
+      Replication, set type to DataProtection
     fullName: volumeType
     remarks: ''
     isDeprecated: false
